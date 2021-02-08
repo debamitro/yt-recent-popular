@@ -6,7 +6,7 @@ app.set ('view engine', 'pug')
 
 const {google} = require ('googleapis')
 
-const API_KEY = '';             // take it from the file GOOGLE_API_KEY
+const API_KEY = process.env.GOOGLE_API_KEY;             // take it from the file GOOGLE_API_KEY
 
 const youtube = google.youtube ({
     version: 'v3',
