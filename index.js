@@ -13,6 +13,11 @@ const youtube = google.youtube ({
     auth: API_KEY
 })
 
+let app_port = process.env.PORT
+if (app_port == null || app_port == "") {
+    app_port = 3000
+}
+
 app.get ('/', (req, res) => res.render ('index'))
 
 const search_published_after = '2020-12-31T16:00:00Z';
@@ -49,4 +54,4 @@ app.get ('/search', (req, res) => {
                          })
 })
 
-app.listen (3000, () => console.log ("Listening on port 3000"))
+app.listen (app_port, () => console.log (`Listening on port ${app_port}`))
