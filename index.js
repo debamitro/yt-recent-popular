@@ -37,15 +37,15 @@ app.get ('/search', (req, res) => {
                              }
                              else
                              {
-                                 var data_as_list = '<ul>';
+                                 var data_as_list = '<div class=\"video_list\">';
                                  results.data.items.forEach ( (item) => {
-                                     data_as_list += '<li><a href=\"https://www.youtube.com/watch?v=' + item.id.videoId
-                                         + '\"><img src=\"' + item.snippet.thumbnails.default.url
-                                         + '\"></img>' + item.snippet.title + '</a><br />'
-                                         + 'Channel: ' + item.snippet.channelTitle + '<br />'
-                                         + 'Publish date: ' + item.snippet.publishedAt + '</li>\n';
+                                     data_as_list += '<div class=\"one_video\"><div class=\"one_video_pic\"><a href=\"https://www.youtube.com/watch?v=' + item.id.videoId
+                                         + '\" target=\"_blank\"><img src=\"' + item.snippet.thumbnails.default.url
+                                         + '\"></img></a></div><div class=\"one_video_details\"><div class=\"one_video_title\">' + item.snippet.title + '</div>'
+                                         + '<div class=\"one_video_channel\">' + item.snippet.channelTitle + '</div>'
+                                         + '<div class=\"one_video_publishdate\">Publish date: ' + item.snippet.publishedAt + '</div></div></div>\n';
                                  })
-                                 data_as_list += '</ul>';
+                                 data_as_list += '</div>';
                                  res.render ('results', {
                                      query: req.query.q,
                                      timeafter: search_published_after,

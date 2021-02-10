@@ -1,0 +1,39 @@
+.video_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.one_video {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    color: #dddddd;
+    background-color: black;
+}
+
+.one_video_pic {
+    margin-right: 5px;
+}
+
+.one_video_pic img {
+}
+
+.one_video_details {
+}
+
+.one_video_title {
+    font-family: serif, times new roman;
+    font-size: 1em;
+}
+
+.one_video_channel {
+    font-family: Arial, helvetica;
+    font-size: 0.8em;
+}
+
+.one_video_publishdate {
+    font-family: Arial, Helvetica;
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
