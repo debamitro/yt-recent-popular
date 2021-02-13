@@ -2,9 +2,14 @@ html
   head
     title YouTube Most Recent Popular Videos - Search results
     meta(name='viewport',content='width=device-width, initial-scale=1')
+    link(rel='stylesheet',href='css/normalize.css')
+    link(rel='stylesheet',href='css/basscss.css')
     link(rel='stylesheet',href='css/style.css')
   body
-    a(href='/') New search
-    div
-      = 'Results for ' + query + ' published after ' + timeafter
-      != data
+    div(class='p1')
+      p(class='h2')
+        a(href='/') Most Recent Popular YouTube Video Search
+        | /Results
+      div
+        = 'Top results for ' + query + ' published after ' + timeafter
+        != data

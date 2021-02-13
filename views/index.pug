@@ -2,10 +2,15 @@ html
   head
     title YouTube Most Recent Popular Videos
     meta(name='viewport',content='width=device-width, initial-scale=1')
+    link(rel='stylesheet',href='css/normalize.css')
+    link(rel='stylesheet',href='css/basscss.css')
+    link(rel='stylesheet',href='css/style.css')
   body
-    h1 Most Recent Popular YouTube Video Search
-    div
-      | What are you looking for:
-      form(method='GET' action='search')
-        input(name='q' type='text')
-        button(type='submit') search
+    div(class='p1')
+      p(class='h1') Most Recent Popular YouTube Video Search
+      a(href='/about') About this site
+      div
+        | What are you looking for:
+        form(method='GET' action='search')
+          input(name='q' type='text')
+          button(type='submit') search

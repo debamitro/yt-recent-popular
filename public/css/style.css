@@ -1,15 +1,15 @@
 .video_list {
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 .one_video {
     margin-bottom: 5px;
     display: flex;
     flex-direction: row;
-    width: 500px;
+    width: 480px;
     color: #dddddd;
-    background-color: black;
 }
 
 .one_video_pic {
@@ -22,18 +22,28 @@
 .one_video_details {
 }
 
+.one_video_details a {
+    text-decoration: none;
+    color: #dddddd;
+}
+
 .one_video_title {
     font-family: serif, times new roman;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .one_video_channel {
     font-family: Arial, helvetica;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .one_video_publishdate {
     font-family: Arial, Helvetica;
     font-size: 0.7em;
     text-transform: uppercase;
+}
+
+.one_video_stats {
+    font-family: Arial, Helvetica;
+    font-size: 0.8em;
 }
