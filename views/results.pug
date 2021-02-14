@@ -11,5 +11,10 @@ html
         a(href='/') Most Recent Popular YouTube Video Search
         | /Results
       div
-        = 'Top results for ' + query + ' published after ' + timeafter
+        = 'Top results for \"' + query + '\" published after ' + timeafter
         != data
+    div(class='p1 bg-silver center border-top h4')
+      | Made using <a href="http://expressjs.com" target="_blank">Express</a>,
+      | <a href="https://basscss.com" target="_blank">Basscss</a> and
+      | <a href="https://developers.google.com/youtube/v3/getting-started">YouTube Data API</a>
+      | (<a href="https://github.com/debamitro/yt-recent-popular" target="_blank">source</a>)
