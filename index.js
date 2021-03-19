@@ -21,8 +21,18 @@ if (app_port == null || app_port == "") {
 app.get ('/', (req, res) => res.render ('index'))
 app.get ('/about', (req, res) => res.render ('about'))
 
-const search_published_after = '2020-12-31T16:00:00Z';
+function get_ymdhms_from_query (query)
+{
+    return query.year + '-' +
+           query.month + '-' +
+           query.day + 'T' +
+           query.hour + ':' +
+           query.minute + ':' +
+           query.second + 'Z';
+}
+
 app.get ('/search', (req, res) => {
+    const search_published_after = get_ymdhms_from_query (req.query)
     youtube.search.list ({
         part: 'snippet',
         q: req.query.q,
@@ -122,6 +132,7 @@ function serve_results (data, req, res)
                     + one_video_stats))
             })
 
+            const search_published_after = get_ymdhms_from_query (req.query)
             res.render ('results', {
                 query: req.query.q,
                 timeafter: search_published_after,
