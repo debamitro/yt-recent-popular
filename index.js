@@ -39,7 +39,7 @@ app.get ('/search', (req, res) => {
         publishedAfter: search_published_after,
         type: 'video',
         order: 'viewCount',
-        maxResults: 10
+        maxResults: 50
     },
                          (err, results) => {
                              if (err)
